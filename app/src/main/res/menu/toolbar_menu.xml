@@ -2,10 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Primero el botón de transmisión -->
+    <item
+        android:id="@+id/action_cast"
+        android:icon="@drawable/ic_cast"
+        android:title="Transmitir"
+        app:showAsAction="ifRoom" />
+
+    <!-- Segundo el botón de notificaciones -->
+    <item
+        android:id="@+id/action_notifications"
+        android:icon="@drawable/ic_notifications"
+        android:title="Notificaciones"
+        app:showAsAction="ifRoom" />
+
+    <!-- Último el botón de búsqueda -->
     <item
         android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
         android:title="Buscar"
-        android:icon="@android:drawable/ic_menu_search"
         app:showAsAction="ifRoom|collapseActionView"
         app:actionViewClass="androidx.appcompat.widget.SearchView" />
+
 </menu>

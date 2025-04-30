@@ -1,45 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    card_view:cardCornerRadius="12dp"
-    card_view:cardElevation="4dp">
+    android:padding="8dp"
+    android:background="?attr/selectableItemBackground">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <!-- Miniatura del video -->
+    <ImageView
+        android:id="@+id/imageThumbnail"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Título del video -->
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="8dp">
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="Título del video"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/imageThumbnail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonOptions" />
 
-        <!-- Miniatura -->
-        <ImageView
-            android:id="@+id/video_thumbnail"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:scaleType="centerCrop"
-            android:contentDescription="Miniatura del video"
-            android:background="@drawable/rounded_image_bg" />
+    <!-- Botón de opciones (tres puntos) -->
+    <ImageView
+        android:id="@+id/buttonOptions"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_more_vert"
+        android:contentDescription="Opciones"
+        android:tint="@android:color/darker_gray"
+        app:layout_constraintTop_toTopOf="@id/textTitle"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- Título del video -->
-        <TextView
-            android:id="@+id/video_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Título del video"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:textColor="#000000"
-            android:paddingTop="8dp" />
+    <!-- Nombre del canal -->
+    <TextView
+        android:id="@+id/textChannel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="Nombre del canal"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/textTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonOptions" />
 
-        <!-- Nombre del canal -->
-        <TextView
-            android:id="@+id/video_channel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nombre del canal"
-            android:textSize="14sp"
-            android:textColor="#777777" />
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

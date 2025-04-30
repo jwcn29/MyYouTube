@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#FF0000</color>         <!-- rojo -->
-    <color name="colorPrimaryDark">#B00000</color>    <!-- rojo oscuro -->
-    <color name="colorAccent">#FFFFFF</color>         <!-- blanco -->
+    <color name="colorPrimaryDark">#B00000</color>     <!-- rojo oscuro -->
+    <color name="colorAccent">#FFFFFF</color>          <!-- blanco -->
 
+    <!-- Nuevos colores agregados -->
+    <color name="white">#FFFFFF</color>                <!-- blanco puro -->
+    <color name="black">#000000</color>                <!-- negro puro -->
 </resources>

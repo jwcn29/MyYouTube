@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Botón Inicio -->
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+    android:title="Inicio" />
+
+    <!-- Botón Shorts -->
+    <item
+        android:id="@+id/nav_shorts"
+        android:icon="@drawable/ic_shorts"
+    android:title="Shorts" />
+
+    <!-- Botón Crear (+)  -->
+    <item
+        android:id="@+id/nav_add"
+        android:icon="@drawable/ic_add"
+    android:title="" />
+
+    <!-- Botón Suscripciones -->
+    <item
+        android:id="@+id/nav_subscriptions"
+        android:icon="@drawable/ic_subscriptions"
+    android:title="Suscripciones" />
+
+    <!-- Botón Biblioteca -->
+    <item
+        android:id="@+id/nav_library"
+        android:icon="@drawable/ic_library"
+    android:title="Biblioteca" />
+
+</menu>

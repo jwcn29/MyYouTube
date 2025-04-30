@@ -1,20 +1,23 @@
 package com.appmovil.myyoutube.models;
 
 public class Video {
+
+    private String id;
     private String title;
     private String channel;
-    private int thumbnailResource;
-    private String videoUrl;  // NUEVO: URL del video real
+    private String thumbnailUrl;
 
-    // Constructor actualizado
-    public Video(String title, String channel, int thumbnailResource, String videoUrl) {
+    public Video(String id, String title, String channel, String thumbnailUrl) {
+        this.id = id;
         this.title = title;
         this.channel = channel;
-        this.thumbnailResource = thumbnailResource;
-        this.videoUrl = videoUrl;
+        this.thumbnailUrl = thumbnailUrl;
     }
 
-    // Getters
+    public String getId() {
+        return id;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -23,11 +26,12 @@ public class Video {
         return channel;
     }
 
-    public int getThumbnailResource() {
-        return thumbnailResource;
+    public String getThumbnailUrl() {
+        return thumbnailUrl;
     }
 
-    public String getVideoUrl() {
-        return videoUrl;
+    // 🔥 NUEVO MÉTODO para obtener la URL del video
+    public String getUrl() {
+        return "https://www.youtube.com/watch?v=" + id;
     }
 }

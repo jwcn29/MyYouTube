@@ -1,3 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Nombre de la aplicación -->
     <string name="app_name">My YouTube</string>
+
+    <!-- Descripciones para accesibilidad (contentDescription) -->
+    <string name="desc_video_thumbnail">Miniatura del video</string>
+    <string name="desc_play_icon">Ícono de reproducción</string>
+
+    <!-- Textos por defecto en caso de error -->
+    <string name="error_loading_video">Error al cargar el video</string>
+    <string name="no_video_found">No se encontró el video</string>
+
+    <!-- Otros textos útiles -->
+    <string name="toolbar_back">Regresar</string>
+
 </resources>
